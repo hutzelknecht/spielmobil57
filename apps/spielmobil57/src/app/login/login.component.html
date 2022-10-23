@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <div class="row mt-5">
+    <div class="col"></div>
+    <div class="col-4">
+      <div class="card shadow">
+        <div class="card-body">
+          <form>
+            <!-- Heading -->
+            <div class="mb-3">
+              <h4 class="text-dark text-muted">Login</h4>
+            </div>
+
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input type="email" name="email" class="form-control" [(ngModel)]="email"/>
+              <label class="form-label">Email</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <input type="password" name="password" class="form-control" [(ngModel)]="password"/>
+              <label class="form-label">Password</label>
+            </div>
+
+            <!-- 2 column grid layout for inline styling -->
+            <!--            <div class="row mb-4">-->
+            <!--              <div class="col d-flex justify-content-center">-->
+            <!--                &lt;!&ndash; Checkbox &ndash;&gt;-->
+            <!--                <div class="form-check">-->
+            <!--                  <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />-->
+            <!--                  <label class="form-check-label" for="form1Example3"> Remember me </label>-->
+            <!--                </div>-->
+            <!--              </div>-->
+
+            <!--              <div class="col">-->
+            <!--                &lt;!&ndash; Simple link &ndash;&gt;-->
+            <!--                <a href="#!">Forgot password?</a>-->
+            <!--              </div>-->
+            <!--            </div>-->
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block" (click)="login()">
+              Sign in
+            </button>
+            <div class="row text-dark">
+              <div class="col-md-6">
+                <a href="" style="text-decoration: none;">Noch kein Konto? <span class="text-danger">Registrieren</span></a>
+              </div>
+              <div class="col-md-6">
+                <a href="" style="text-decoration: none;">Forgot password?</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-6"></div>
+  </div>
+</div>
