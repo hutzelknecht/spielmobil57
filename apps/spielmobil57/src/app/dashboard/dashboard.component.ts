@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from "rxjs";
-import {AngularFirestore, DocumentData} from "@angular/fire/compat/firestore";
-import {Location} from "../models";
+
+import {LocationService} from "../shared/location.service";
+import {AuthService} from "../shared/auth.service";
 
 @Component({
   selector: 'spielmobil57-dashboard',
@@ -10,13 +10,13 @@ import {Location} from "../models";
 })
 export class DashboardComponent implements OnInit {
 
-  locations$: Observable<Location[]> | undefined;
+  constructor(public location: LocationService,
+              private auth: AuthService) {}
 
-  constructor(private firestore: AngularFirestore) {}
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-    const locations = this.firestore.collection<Location>('location');
-    this.locations$ = locations.valueChanges();
+  logout() {
+    this.auth.logout();
   }
 
 }
